@@ -65,7 +65,7 @@
 
                 <TextView
                     android:layout_marginLeft="5dp"
-                    android:id="@+id/temperature"
+                    android:id="@+id/temperature_txt"
                     android:text="weather"
                     android:textSize="25sp"
                     android:textColor="@color/textColor"
@@ -73,8 +73,9 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
+                    android:id="@+id/city_txt"
                     android:layout_marginLeft="5dp"
-                    android:text="City status"
+                    android:text="city"
                     android:textColor="@color/textColor"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
@@ -120,15 +121,15 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/ctxt"
-                        android:text="cpu"
+                        android:id="@+id/btxt"
+                        android:text="Battery"
                         android:layout_gravity="center"
                         android:textColor="@color/textColor"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
 
                     <TextView
-                        android:id="@+id/cpu_txt"
+                        android:id="@+id/battery_txt"
                         android:textSize="30sp"
                         android:text="00000"
                         android:textColor="@color/textColor"
@@ -184,17 +185,20 @@
         </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/connection_bar_layout"
                 android:layout_marginTop="20dp"
                 android:orientation="horizontal"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center">
+                android:layout_gravity="center"
+                android:layout_weight="4">
 
                 <LinearLayout
-                    android:layout_marginRight="10dp"
+
                     android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
 
                     <ImageView
                         android:id="@+id/wifi_img"
@@ -212,10 +216,10 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_marginRight="10dp"
                     android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
 
                     <ImageView
                         android:id="@+id/bluetooth_img"
@@ -235,10 +239,11 @@
             </LinearLayout>
 
                 <LinearLayout
-                    android:layout_marginRight="30dp"
+
                     android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
 
                     <ImageView
                         android:id="@+id/data_img"
@@ -255,10 +260,11 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_marginRight="30dp"
+
                     android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
 
                     <ImageView
                         android:id="@+id/location_img"
@@ -277,8 +283,31 @@
     </LinearLayout>
 
 
+        <!--Bottom panel-->
+       <LinearLayout
+            android:orientation="horizontal"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_weight="2">
+
+            <ImageView
+                android:src="@drawable/ic_wifi_white_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+           <ImageView
+               android:src="@drawable/ic_wifi_white_24dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"/>
+
+       </LinearLayout>
+
 
     </LinearLayout>
+
+
 
 </LinearLayout>
 
